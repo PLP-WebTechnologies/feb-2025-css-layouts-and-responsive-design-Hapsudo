@@ -1,0 +1,122 @@
+/* Basic Reset & Layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+    background-color: #e6f7fa;
+    color: #033e6b;
+    line-height: 1.6;
+  }
+  
+  /* Header */
+  header {
+    background-color: #0077b6;
+    color: #fff;
+    padding: 1.5rem;
+    text-align: center;
+  }
+  
+  /* Navbar using Flexbox */
+  .navbar {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #023e8a;
+    flex-wrap: wrap;
+  }
+  
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .navbar a:hover {
+    background-color: #0096c7;
+  }
+  
+  /* Grid Layout */
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  main, aside {
+    padding: 1.5rem;
+    box-shadow: 0 0 10px rgba(0, 119, 182, 0.1);
+  }
+  
+  main {
+    background: #ffffff;
+    border-left: 4px solid #0077b6;
+  }
+  
+  aside {
+    background: #caf0f8;
+    border-left: 4px solid #00b4d8;
+  }
+  
+  /* Images */
+  .img-circle {
+    display: block;
+    margin: 1rem auto;
+    width: 100%;
+    max-width: 250px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  .img-fluid {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Footer */
+  footer {
+    background: #0077b6;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Media Queries */
+  @media (min-width: 600px) {
+    .container {
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    body {
+      font-size: 18px;
+    }
+  
+    .navbar {
+      justify-content: flex-start;
+      padding-left: 2rem;
+    }
+  
+    .container {
+      padding: 2rem 4rem;
+    }
+  }
+  
